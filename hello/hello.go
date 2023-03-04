@@ -1,11 +1,14 @@
+// https://go.dev/doc/tutorial/call-module-code
 package main
 
-import "fmt"
+import (
+    "fmt"
 
-import "rsc.io/quote"
+    "example.com/greetings"
+)
 
 func main() {
-    fmt.Println(quote.Go())
+    // Get a greeting message and print it.
+    message := greetings.Hello("Gladys")
+    fmt.Println(message)
 }
-
-// Printed a nice quote: Don't communicate by sharing memory, share memory by communicating.
